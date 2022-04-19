@@ -2005,3 +2005,47 @@ const movies = [
 if (typeof module !== 'undefined') {
   module.exports = movies;
 }
+//Iteration 1
+const getAllDirectors = movies.map (function(movie){
+  return movie.director});
+console.log(getAllDirectors)
+
+//Iteration 2
+const howManyMovies = movies.filter(movie => movie.director === 'Steven Spielberg');
+ 
+console.log(howManyMovies); 
+
+//Iteration 3: All scores average
+
+const totalScore = movies.reduce(function (sum, movie) {
+  return sum + movie.score;
+}, 0);
+const scoresAverage = totalScore/movies.length;
+Math.round(scoresAverage * 100)/100
+console.log(Math.round(scoresAverage * 100)/100)
+
+//Iteration 4: Drama movies
+const dramaMovies = movies.filter(movie => movie.genre = 'Drama');
+const totalDramaScore = dramaMovies.reduce(function (sum, movie) {
+  return sum + movie.score;
+}, 0);
+const dramaMoviesScore = totalDramaScore/dramaMovies.length;
+Math.round(dramaMoviesScore * 100)/100
+console.log(Math.round(dramaMoviesScore * 100)/100) 
+
+//Iteration 5: Order by year
+const orderByYear = movies.map (function(movie){
+  return movie.title, movie.year});
+  orderByYear.sort((a, b) => a - b);
+console.log(orderByYear);
+
+//Iteration 6: Alphabetic order
+let firstTwentyArr = []
+function sortFilms (movies){
+  for(let j=0, j<20, j++) 
+  {firstTwentyArr[j]}
+console.log(firstTwentyArr)
+}
+sortFilms (movies)
+firstTwentyArr.sort();
+console.log(firstTwentyArr);
